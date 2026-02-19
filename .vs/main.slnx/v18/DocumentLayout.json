@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{93670A68-4FA2-490C-9284-7CC45CBB2588}|main\\main.vcxproj|C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\main\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93670A68-4FA2-490C-9284-7CC45CBB2588}|main\\main.vcxproj|solutionrelative:main\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{93670A68-4FA2-490C-9284-7CC45CBB2588}|main\\main.vcxproj|C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\main\\clsBankClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{93670A68-4FA2-490C-9284-7CC45CBB2588}|main\\main.vcxproj|solutionrelative:main\\clsBankClient.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\main\\main.cpp",
+              "RelativeDocumentMoniker": "main\\main.cpp",
+              "ToolTip": "C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\main\\main.cpp*",
+              "RelativeToolTip": "main\\main.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-19T22:00:47.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsBankClient.h",
+              "DocumentMoniker": "C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\main\\clsBankClient.h",
+              "RelativeDocumentMoniker": "main\\clsBankClient.h",
+              "ToolTip": "C:\\BankProject\\.vs\\BankProject.slnx\\v18\\main\\main\\clsBankClient.h",
+              "RelativeToolTip": "main\\clsBankClient.h",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAIYAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-02-19T17:02:38.242Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
