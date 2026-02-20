@@ -1,4 +1,4 @@
-#prag#pragma once
+#pragma once
 #include <iostream>
 #include<limits>
 #include <string>

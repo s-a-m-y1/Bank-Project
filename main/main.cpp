@@ -1,9 +1,10 @@
 #include<iostream>
-#include"clsBankClient.h"
+#include"clsMainScreen.h"
+
 using namespace std;
 int main()
 {
-	clsBankClient Client = clsBankClient::Find("A1 , 0120");
-
+	
+	clsMainScreen::ShowMainMenue();
 	return 0;
 }

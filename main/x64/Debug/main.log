@@ -17,8 +17,19 @@ C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsString.h(324,30): warning C
 C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsString.h(372,22): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsBankClient.h(96,77): error C2365: 'clsBankClient::Accountbalance': redefinition; previous definition was 'member function'
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsInputValidate.h(113,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'main.cpp')
-      C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsBankClient.h(92,9):
-      see declaration of 'clsBankClient::Accountbalance'
   
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsInputValidate.h(117,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsAddNewClientScreen.h(23,60): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsUpdateClientScreen.h(55,11): warning C4129: ' ': unrecognized character escape sequence
+  (compiling source file 'main.cpp')
+  
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsUpdateClientScreen.h(38,60): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+  main.vcxproj -> C:\BankProject\.vs\BankProject.slnx\v18\main\x64\Debug\main.exe

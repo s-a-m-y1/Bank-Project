@@ -47,7 +47,7 @@
     <ClInclude Include="clsAddNewUser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clsClienListScreen.h">
+    <ClInclude Include="clsClientListScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsDeleteClientScreen.h">
@@ -60,6 +60,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsFindClientScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsMainscreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdateClientScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
