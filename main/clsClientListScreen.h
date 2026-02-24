@@ -1,0 +1,70 @@
+#pragma once
+
+#include <iostream>
+#include "clsScreen.h"
+#include "clsBankClient.h"
+#include <iomanip>
+
+class clsClientListScreen :protected clsScreen
+{
+
+private:
+    static void PrintClientRecordLine(clsBankClient Client)
+    {
+
+        cout << setw(8) << left << "" << "| " << setw(15) << left << Client.Accoountnumber();
+        cout << "| " << setw(20) << left << Client.FullName();
+        cout << "| " << setw(12) << left << Client.Phone;
+        cout << "| " << setw(25) << left << Client.Email;
+        cout << "| " << setw(13) << left << Client.pincode;
+        cout << "| " << setw(13) << left << Client.Accountbalance;
+
+    }
+
+public:
+
+
+    static void ShowClientsList()
+    {
+
+        if (!clsScreen::_AccesPermissionDenied(clsUser::enPermissions::pListClients))
+        {
+            return;
+        }
+        vector <clsBankClient> vClients = clsBankClient::GetClientList();
+        string Title = "\t  Client List Screen";
+        string SubTitle = "\t    (" + to_string(vClients.size()) + ") Client(s).";
+
+        _DrawScreenHeader(Title, SubTitle);
+
+
+        cout << setw(8) << left << "" << "\n\t__________________________________________________________________";
+        cout << "_________________________________________\n" << endl;
+
+        cout << setw(8) << left << "" << "| " << left << setw(15) << "Accout Number";
+        cout << "| " << left << setw(20) << "Client Name";
+        cout << "| " << left << setw(12) << "Phone";
+        cout << "| " << left << setw(25) << "Email";
+        cout << "| " << left << setw(13) << "Pin Code";
+        cout << "| " << left << setw(13) << "Balance";
+        cout << setw(8) << left << "" << "\n\t________________________________________________________________";
+        cout << "_________________________________________\n" << endl;
+
+        if (vClients.size() == 0)
+            cout << "\t\t\t\tNo Clients Available In the System!";
+        else
+
+            for (clsBankClient Client : vClients)
+            {
+
+                PrintClientRecordLine(Client);
+                cout << endl;
+            }
+
+        cout << setw(8) << left << "" << "\n\t__________________________________________________________________";
+        cout << "_________________________________________\n" << endl;
+
+    }
+
+};
+
