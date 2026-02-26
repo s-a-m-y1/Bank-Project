@@ -24,7 +24,7 @@ public:
 	{
 		vector<clsBankClient::stRecordLog>VLog = clsBankClient::GetTransferLog();
 		string Title = "\tTransfers Log Screen";
-		string SubTitle = "Users : ( " + to_string(VLog.size()) + " ) " + "(L)";
+		string SubTitle = "\tUsers : ( " + to_string(VLog.size()) + " ) " + "(L)";
 		clsScreen::_DrawScreenHeader(Title, SubTitle);
 
 		cout << setw(8) << left << "" << "\n\t__________________________________________________________________";

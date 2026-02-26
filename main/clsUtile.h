@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class clsUtil
+class clsUtile
 {
 
 public:

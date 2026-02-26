@@ -3,6 +3,7 @@
 #include <string>
 #include"clsDate.h"
 #include "clsPerson.h"
+#include"clsUtile.h"
 #include "clsString.h"
 #include <vector>
 #include <fstream>
@@ -26,12 +27,12 @@ private:
         vUserData = clsString::Split(Line, Seperator);
 
         return clsUser(enMode::UpdateMode, vUserData[0], vUserData[1], vUserData[2],
-            vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
+            vUserData[3],  vUserData[4], clsUtile::DecryptText( vUserData[5]), stoi(vUserData[6]));
 
     }
       string _ConvertLineThisUser(string Seperator = "#//#")
     {
-          string Line = clsDate::DateAndTime() + Seperator + UserName + Seperator + Password + Seperator + to_string(Permissions);
+          string Line = clsDate::DateAndTime() + Seperator + UserName + Seperator + clsUtile::EncryptText( Password) + Seperator + to_string(Permissions);
           return Line;
     }
  
@@ -44,7 +45,7 @@ private:
         UserRecord += User.Email + Seperator;
         UserRecord += User.Phone + Seperator;
         UserRecord += User.UserName + Seperator;
-        UserRecord += User.Password + Seperator;
+        UserRecord += clsUtile::EncryptText( User.Password) + Seperator;
         UserRecord += to_string(User.Permissions);
 
         return UserRecord;
@@ -378,7 +379,7 @@ public:
         vector <string>Load = clsString::Split(line, Spretor);
         L.Date = Load[0];
         L.Username = Load[1];
-        L.Password = Load[2];
+        L.Password = clsUtile::DecryptText( Load[2]);
         L.permissions = stoi(Load[3]);
         return L;
     }
