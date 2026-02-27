@@ -55,7 +55,7 @@ public:
 	static bool ShowLoginScreen()//THIS IS PUBLIC FUNCTION TO SHOW LOGIN SCREEN THI IS NEME ABSTRACTED FROM PRIVATE FUNCTION TO BE CALLED IN MAIN
 	{
 		system("cls");
-		_DrawScreenHeader("\t Login Screen");
+		_DrawScreenHeader("\t    Login Screen");
 		return(_Login());
 	}
 };/// :-)

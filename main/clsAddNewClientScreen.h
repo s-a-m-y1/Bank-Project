@@ -43,7 +43,7 @@ public:
 		{
 			return;
 		}
-		clsScreen::_DrawScreenHeader("\t\tAdd New Client Screen");
+		clsScreen::_DrawScreenHeader("\t    Add New Client Screen");
 		cout << "Please enter Accountnumber ? ";
 		string Accountnumber = clsInputValidate::ReadString();
 		while (clsBankClient::IsclientExist(Accountnumber))
