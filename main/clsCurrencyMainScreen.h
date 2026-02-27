@@ -4,6 +4,8 @@
 #include<iomanip>
 #include"clsScreen.h"
 #include"clsInputValidate.h"
+#include"clsShowListCurrencysList.h"
+#include"clsFindCurrency.h"
 using namespace std;
 class clsCurrencyMainScreen:protected clsScreen
 {
@@ -29,12 +31,13 @@ private:
 	static void _ShowListCurrencysScreen()
 	{
 
-		cout << "\nList of Currencys Will be here...\n";
+		//cout << "\nList of Currencys Will be here...\n";
+		clsShowListCurrencysList::ShowCurrencysList();
 	}
 	static void _showFindCrrencyScreen ()
 	{
 
-		cout << "\nUPdate of Currencys Will be here...\n";
+		clsFindCurrency::ShowFindScreen();
 	}
 	static void _ShowCurrencyCulacukatorScreen()
 	{
@@ -90,7 +93,7 @@ public:
 	static void ShowCurrencyMainScreen()
 	{
 		system("cls");
-		_DrawScreenHeader("\tCurrrency Exchange Main Screen");
+		_DrawScreenHeader("  Currrency Exchange Main Screen");
 
 		cout << setw(37) << left << "" << "===========================================\n";
 		cout << setw(37) << left << "" << "\t\tCurrrency Exchange Main Screen\n";

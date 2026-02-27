@@ -14,21 +14,23 @@ private:
 	string _CurrencyName = "";
 	float _Rate = 0.0;
 	///
-	static clsCurrency _ConvertCurrencyLine(string Line , string spretor  = "#//#" )///This Mode Update 
+	static clsCurrency _ConvertCurrencyLine(string Line, string spretor = "#//#")
 	{
-		/// here Steps Filter This Line From File This Metod Call This Method this Job Filter Line from Spretor To Vector and From vector To Consractror For Data members
-		vector<string>VFilter = clsString::Split(Line, spretor);///Here Pull The Line Of Pramters And Filter From This job 
-		if (!VFilter.empty())///here Check This Vector If Empty Or Not
+		vector<string> VFilter = clsString::Split(Line, spretor);
+
+	
+		if (VFilter.size() >= 4)
 		{
-			return clsCurrency(_enMoode::UpdateMode, VFilter[0], VFilter[1], VFilter[2],  stoi(VFilter[4]));
-			
+			return clsCurrency(_enMoode::UpdateMode,
+				VFilter[0],   // Country
+				VFilter[1],   // Code
+				VFilter[2],   // Name
+				stod(VFilter[3])); 
 		}
 		else
 		{
-		return	_ConvertemptyCurrency();
+			return _ConvertemptyCurrency();
 		}
-	
-		
 	}
 	static clsCurrency _ConvertemptyCurrency()///This Mode Empty  
 	{

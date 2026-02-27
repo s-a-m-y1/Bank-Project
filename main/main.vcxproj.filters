@@ -119,6 +119,9 @@
     <ClInclude Include="clsShowListCurrencysList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsFindCurrency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="main.rc">
