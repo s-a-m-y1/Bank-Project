@@ -71,12 +71,12 @@ C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsCurrency.h(28,9): warning C
 C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsUpdateCurrencyRate.h(46,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsCurrencyCalculatorScreen.h(94,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsCurrencyCalculatorScreen.h(97,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
 C:\BankProject\.vs\BankProject.slnx\v18\main\main\ShowLoginRegisterScreen.h(31,41): warning C4129: ' ': unrecognized character escape sequence
   (compiling source file 'main.cpp')
   
-C:\BankProject\.vs\BankProject.slnx\v18\main\main\main.cpp(10,41): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\main.cpp(11,41): warning C4390: ';': empty controlled statement found; is this the intent?
 C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsUser.h(313,1): warning C4715: 'clsUser::Save': not all control paths return a value
   main.vcxproj -> C:\BankProject\.vs\BankProject.slnx\v18\main\x64\Debug\main.exe

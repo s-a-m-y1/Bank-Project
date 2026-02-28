@@ -60,77 +60,78 @@ private:
 		
 	}
 public:
-		static void ShowcurrencyCalculatorScreen()
-		{
-			clsScreen::_DrawScreenHeader("  Currency Calculator Screen ");
-			char What = 'n';
-			do
-			{
-			
-			string Code = "";
-			cout << "Enter Code 1 :";
-			Code = clsInputValidate::ReadString();
-			clsCurrency Cu = clsCurrency::FindByCurrencyCode(Code);
-			while (Cu.IsEmpty())
-			{
-				cout << "try ";
-				Code = clsInputValidate::ReadString();
-				 Cu = clsCurrency::FindByCurrencyCode(Code);
-			}
-			cout << Cu.CurrencyCode() << endl;
+    static void ShowcurrencyCalculatorScreen()
+    {
+        clsScreen::_DrawScreenHeader("  Currency Calculator Screen ");
+        char What = 'n';
 
-			cout << "Enter Code 2 :";
-			Code = clsInputValidate::ReadString();
-			clsCurrency Cu1 = clsCurrency::FindByCurrencyCode(Code);
-			while (Cu1.IsEmpty())
-			{
-				cout << "try ";
-				Code = clsInputValidate::ReadString();
-				 Cu1 = clsCurrency::FindByCurrencyCode(Code);
-			}
-			cout << Cu1.CurrencyCode() << endl;
-			float Amout = 0.0;
-			cout << "Enter A Amount : ";
-			Amout = clsInputValidate::ReadFloatNumber();
-			if (Cu.CurrencyCode()!=Cu1.CurrencyCode())
-			{
-				if (!IsUSD(Cu.CurrencyCode()) ,!IsUSD(Cu1.CurrencyCode()) )
-				{
-					_PrintCurrency(Cu);
-					float Doler = ToUsd(Amout ,Cu);
-					cout << Amout << " " << Cu.CurrencyCode() << " = " << Doler << " USD " << endl;
-					///
-					_PrintCurrency(Cu1);
-					float Pound = FromUsd(Amout , Cu1);
-					cout << Amout << " " << Cu.CurrencyCode() << " = " << Pound << Cu1.CurrencyCode() <<endl;
-				}
-				else if (IsUSD(Cu.CurrencyCode()) , !IsUSD(Cu1.CurrencyCode()))
-				{
-					_PrintCurrency(Cu);
-					float Pound = FromUsd(Amout, Cu1);
-					cout << Amout << " " << Cu.CurrencyCode() << " = " << Pound << Cu1.CurrencyCode() << endl;
+        do
+        {
+            string Code = "";
 
-				}
-				else/// !IsUSD(Cu.CurrencyCode()) , IsUSD(Cu1.CurrencyCode()))
-				{
-					_PrintCurrency(Cu);
-					float Doler = ToUsd(Amout, Cu);
-					cout << Amout << " " << Cu.CurrencyCode() << " = " << Doler << " USD " << endl;
-				}
-			}
-			else
-			{
-				return;
-			}
+          
+            cout << "\n Enter Currency 1 Code (From): ";
+            Code = clsInputValidate::ReadString();
+            clsCurrency Cu = clsCurrency::FindByCurrencyCode(Code);
+            while (Cu.IsEmpty())
+            {
+                cout << " Failed operation! Please try again: ";
+                Code = clsInputValidate::ReadString();
+                Cu = clsCurrency::FindByCurrencyCode(Code);
+            }
+            cout << " Selected: " << Cu.CurrencyCode() << endl;
 
-			
-			cout << "Are you want Add new [y / n ]";
-			cin >> What;
+        
+            cout << "\n Enter Currency 2 Code (To): ";
+            Code = clsInputValidate::ReadString();
+            clsCurrency Cu1 = clsCurrency::FindByCurrencyCode(Code);
+            while (Cu1.IsEmpty())
+            {
+                cout << " Failed operation! Please try again: ";
+                Code = clsInputValidate::ReadString();
+                Cu1 = clsCurrency::FindByCurrencyCode(Code);
+            }
+            cout << " Selected: " << Cu1.CurrencyCode() << endl;
 
-			} while (What=='y'|| What=='Y');
+            cout << "\n Enter Amount To Exchange: ";
+            float Amount = clsInputValidate::ReadFloatNumberBetween(100.0,10000.0);
 
-		}
+            if (Cu.CurrencyCode() != Cu1.CurrencyCode())
+            {
+               
+                float to_Dollar = ToUsd(Amount, Cu);
+                float To_TargetCurrency = FromUsd(to_Dollar, Cu1);
+
+                if (IsUSD(Cu1.CurrencyCode()))
+                {
+                    system("cls");
+                    _PrintCurrency(Cu);
+                    cout << "\n Result: " << Amount << " " << Cu.CurrencyCode() << " = " << To_TargetCurrency << " USD " << endl;
+                }
+                else
+                {
+                    system("cls");
+                    _PrintCurrency(Cu);
+                    cout << "\n Step 1: " << Amount << " " << Cu.CurrencyCode() << " = " << to_Dollar << " USD " << endl;
+
+                    cout << "\n-----------------------------\n"<<endl;
+                    _PrintCurrency(Cu1);
+                    cout << " Final Result: " << Amount << " " << Cu.CurrencyCode() << " = " << To_TargetCurrency << " " << Cu1.CurrencyCode()  << endl;
+                }
+            }
+            else
+            {
+                cout << "\n Both currencies are the same. No conversion needed! \n";
+              
+            }
+
+            cout << "\n Do you want to perform another exchange? [y/n]: ";
+            cin >> What;
+
+        } while (What == 'y' || What == 'Y');
+
+        cout << "\n Thank you for using our Currency Converter! See you soon! \n";
+    }   
 
 };
-
-	
+        
