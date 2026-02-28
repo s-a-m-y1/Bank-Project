@@ -6,6 +6,8 @@
 #include"clsInputValidate.h"
 #include"clsShowListCurrencysList.h"
 #include"clsFindCurrency.h"
+#include"clsUpdateCurrencyRate.h"
+#include"clsCurrencyCalculatorScreen.h"
 using namespace std;
 class clsCurrencyMainScreen:protected clsScreen
 {
@@ -41,16 +43,19 @@ private:
 	}
 	static void _ShowCurrencyCulacukatorScreen()
 	{
+		clsCurrencyCalculatorScreen::ShowcurrencyCalculatorScreen();
 
-		cout << "\nList of Currencys Will be here...\n";
+		//cout << "\nList of Currencys Will be here...\n";
+		
 	}
 	static void _ShowUpdateRateScreen()
 	{
-
-		cout << "\nList of Currencys Will be here...\n";
+		clsUpdateCurrencyRate::ShowUpdateScreen();
+		//cout << "\nList of Currencys Will be here...\n";
 	}
 	static void _ShowMainMenuScreen()
 	{
+		
 
 		cout << "\nList of Currencys Will be here...\n";
 	}
@@ -98,11 +103,11 @@ public:
 		cout << setw(37) << left << "" << "===========================================\n";
 		cout << setw(37) << left << "" << "\t\tCurrrency Exchange Main Screen\n";
 		cout << setw(37) << left << "" << "===========================================\n";
-		cout << setw(37) << left << "" << "\t[1] Show Currencys List.\n";
-		cout << setw(37) << left << "" << "\t[2] Find Currency .\n";
-		cout << setw(37) << left << "" << "\t[3]  Update Rate .\n";
-		cout << setw(37) << left << "" << "\t[4] Currency Calulator   .\n";
-		cout << setw(37) << left << "" << "\t[5] Main Screen .\n";
+		cout << setw(37) << left << "" << "\t[1] Show Currencys List  .\n";
+		cout << setw(37) << left << "" << "\t[2] Find Currency        .\n";
+		cout << setw(37) << left << "" << "\t[3] Currency Calulator   .\n";
+		cout << setw(37) << left << "" << "\t[4] Update Rate         .\n";
+		cout << setw(37) << left << "" << "\t[5] Main Screen          .\n";
 		cout << setw(37) << left << "" << "===========================================\n";
 		_AssmebleCurrencys((enCurrencys)_ReadCurrencyMainMenueOption());
 

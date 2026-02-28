@@ -122,6 +122,12 @@
     <ClInclude Include="clsFindCurrency.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="clsUpdateCurrencyRate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCurrencyCalculatorScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="main.rc">

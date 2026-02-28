@@ -68,6 +68,12 @@ C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsTotalBalancesScreen.h(57,83
 C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsCurrency.h(28,9): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsUpdateCurrencyRate.h(46,54): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\BankProject\.vs\BankProject.slnx\v18\main\main\clsCurrencyCalculatorScreen.h(94,45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'main.cpp')
+  
 C:\BankProject\.vs\BankProject.slnx\v18\main\main\ShowLoginRegisterScreen.h(31,41): warning C4129: ' ': unrecognized character escape sequence
   (compiling source file 'main.cpp')
   

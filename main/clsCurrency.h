@@ -97,6 +97,11 @@ static void SaveurrencysDataTOFile(vector<clsCurrency>&VCurrency)///By &
 	 SaveurrencysDataTOFile(VUpdate);
 }
 public:
+	void UpdateRate(float Rate)
+	{
+		_Rate = Rate;
+		_Update();
+	}
 	bool IsEmpty()
 	{
 		return(_Mode == _enMoode::EmptyMode);
